@@ -13,7 +13,9 @@ public class Exercise3 {
         // into a List and print the list and its size
         // TODO: Write code here
 
-        List<Integer> numbers = ReactiveSources.intNumbersFlux()
+        List<Integer> numbers = ReactiveSources
+                .intNumbersFlux()
+                .log()
                 .toStream()
                 .toList();
 
